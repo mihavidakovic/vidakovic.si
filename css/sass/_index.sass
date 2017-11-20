@@ -1,0 +1,163 @@
+.index-top, footer
+	float: left
+	width: 100%
+	p
+		font-size: 24px
+		font-weight: 300 
+		text-align: center
+		+span-columns(11)
+		+shift(0.5)
+		color: rgba(0, 0, 0, 0.6)
+		margin-top: 70px
+		+clearfix
+		+media($mobile)
+			font-size: 18px 
+
+	ul
+		+clearfix
+		+span-columns(4)
+		+shift(4)
+		+omega
+		padding: 0
+		list-style: none
+		+media($mobile)
+			width: 70%
+			margin: 0 auto 
+			padding: 0
+			float: none
+		li
+			+span-columns(3)
+			+omega(4n)
+			text-align: center
+			+media($mobile)
+				width: 50%
+				margin: 0 0 30px
+			a
+				color: rgba(0, 0, 0, 0.7)
+				font-size: 30px 
+			&.dribble
+				a
+					&:hover
+						color: $dribbble 
+			&.twitter
+				a
+					&:hover
+						color: $twitter 
+			&.linkedin
+				a
+					&:hover
+						color: $linkedin 
+			&.mail
+				a
+					&:hover
+						color: $mail 
+	.button
+		+span-columns(12)
+		+clearfix
+		margin-top: 15px
+
+		a
+			+span-columns(4.5)
+			+shift(3.8)
+			border: 2px solid lighten($color, 10%)
+			text-align: center
+			text-decoration: none
+			padding: 10px 
+			color: lighten($color, 10%)
+			font-size: 13px 
+			+media($mobile)
+				width: 100%
+				+shift(0)
+			+media($tablet)
+				width: 100%
+				+shift(0)
+			&:hover
+				border-color: $color
+				color: $color 
+			
+.index-projects
+	float: left
+	width: 100%
+	margin-top: 100px
+	+media($mobile)
+		margin-top: 30px
+	&.work
+		h2
+			text-align: center
+			margin: 10px 0 50px
+			font-size: 40px
+			font-weight: 300 
+	ul
+		padding: 0
+		margin: 0
+		list-style: none
+		li
+			width: 50%
+			float: left
+			height: 650px
+			padding: 200px 0
+			text-align: center
+			overflow: hidden
+			position: relative
+			.content
+				position: relative
+			+media($tablet)
+				width: 100%
+			+media($mobile)
+				width: 100%
+				.button
+					a
+						margin-top: 100px
+						opacity: 1
+						+transform(rotateX(00deg) scale(1))
+			&:hover
+				.button
+					top: 80%
+					opacity: 1
+					+transform(rotateX(0deg) scale(1) translate(-50%, -50%))
+			img
+				width: 150px
+			h2
+				font-size: 50px 
+				font-weight: 200
+				color: rgba(255, 255, 255, 1) 
+				margin: 10px 0 0
+			.button
+				+span-columns(4)
+				padding: 10px 0
+				border: 1px solid rgba(255, 255, 255, 0.5)
+				text-decoration: none
+				color: #fff
+				font-size: 20px
+				font-weight: 300
+				position: absolute
+				margin-top: 180px
+				+transition(300ms all ease-in-out)
+				opacity: 0
+				top: 80%
+				left: 50%
+				+transform(rotateX(90deg) scale(1) translate(-50%, -50%))
+				+media($mobile)
+					width: 80% !important
+					top: 80%
+					opacity: 1
+					+transform(rotateX(0deg) scale(1) translate(-50%, -50%))
+
+				+media($tablet)
+					width: 60% !important
+					top: 80%
+					opacity: 1
+					+transform(rotateX(0deg) scale(1) translate(-50%, -50%))
+
+				&:hover
+					border-color: rgba(255, 255, 255, 1)  
+			&.simplicy
+				background-color: $simplicy 			
+			&.babble
+				background-color: $babble 			
+			&.csgo
+				background-color: $csgo 
+footer
+	+span-columns(8)
+	+shift(2)
+	padding: 100px 0

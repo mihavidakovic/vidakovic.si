@@ -1,0 +1,120 @@
+$color: #2C3E50
+$mobile: new-breakpoint(max-width 480px)
+$tablet: new-breakpoint(max-width 768px min-width 480px)
+$desktop: new-breakpoint(min-width 1024px)
+body
+	background-color: rgba(0, 0, 0, 0.02)
+	font-family: 'Open Sans' !important 
+	border-top: 2px solid $color 
+	p
+		font-size: 1.1rem
+		line-height: 1.625
+		font-weight: 400
+		color: rgba(0, 0, 0, 0.8)  
+		+media($mobile)
+			text-align: center
+	h2
+		font-size: 25px
+		color: rgba(0, 0, 0, 0.9) 
+		margin: 100px 0 10px
+		float: left
+		width: 100%
+		&:first-of-type
+			margin-top: 30px !important
+		+media($mobile)
+			text-align: center
+			margin-top: 40px
+
+	form
+		float: left
+		width: 100%
+		input, textarea
+			width: 100%
+			max-width: 100% 
+			float: left
+			padding: 15px 10px 
+			margin-bottom: 15px
+			font-size: 18px 
+			font-weight: 300 
+			background-color: transparent
+			border: 1px solid rgba(0, 0, 0, 0.3)  
+			outline-style: none
+			&:hover
+				border: 1px solid rgba(0, 0, 0, 0.5)
+.container
+	+outer-container(900px)
+	+media($mobile)
+		width: 100%
+		padding: 0 20px 
+	+media($tablet)
+		width: 100%
+		padding: 0 20px 
+
+header
+	width: 100%
+	float: left
+	padding: 20px 0 
+	+media($mobile)
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+	.logo
+		float: left 
+		+span-columns(1)
+		height: 54px
+		+media($mobile)
+			width: 100%
+			text-align: center
+		a
+			text-decoration: none
+			h1
+				margin: 0
+				background-image: url('../img/logo.png')
+				width: 60px
+				height: 54px
+				text-indent: -9999px
+				-webkit-background-size: cover 
+				-o-background-size: cover 
+				background-size: cover  
+				+media($mobile)
+					margin: 0 auto
+	nav
+		+span-columns(6)
+		float: right
+		margin: 0
+		padding: 0
+		.material-design-hamburger
+			display: none
+			float: left
+			position: absolute
+			left: 10px
+			top: 15px
+		+media($mobile)
+			ul
+				display: none
+			.material-design-hamburger
+				display: block
+			.responsive-menu
+				display: block
+				li
+					width: 100%
+					float: left
+					text-align: center
+					padding: 30px 0
+
+		ul
+			margin: 15px 0 0 
+			padding: 0
+			list-style: none
+			li
+				float: left
+				width: 25%
+				a
+					margin-left: 5px
+					padding: 5px 20px
+					text-decoration: none
+					color: rgba(0, 0, 0, 0.7) 
+					font-weight: 300 
+					&:hover
+						color: $color 
+				&.active
+					a
+						border-bottom: 2px solid $color
